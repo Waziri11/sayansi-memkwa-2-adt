@@ -5,6 +5,63 @@
     var href = location.href.split("?")[0].split("#")[0];
     return href.slice(0, href.lastIndexOf("/") + 1);
   })();
+  // Keep the embedded localization snapshot in sync with page 8's existing
+  // answer lines; these prompts must not render blank-marker source tokens.
+  Object.assign(INLINE["./content/i18n/sw-TZ/texts.json"], {
+    "pg008_n0021": "1. Kiungo cha mwili kinachotumika kunusa harufu katika mazingira huitwa.",
+    "pg008_n0022": "2. Kiungo cha mwili kinachotumika kusikia sauti mbalimbali ni.",
+    "pg008_n0023": "3. Sehemu ya mwili inayotumika kuhisi joto au baridi huitwa.",
+    "pg008_n0024": "4. Jumla ya vitu na viumbe hai vinavyotuzunguka huitwa.",
+    "pg008_n0021_easy_read": "1. Kiungo cha mwili cha kunusa harufu katika mazingira huitwa.",
+    "pg008_n0022_easy_read": "2. Kiungo cha mwili cha kusikia sauti mbalimbali ni.",
+    "pg008_n0023_easy_read": "3. Sehemu ya mwili ya kuhisi joto au baridi huitwa.",
+    "pg008_n0024_easy_read": "4. Jumla ya vitu na viumbe hai vinavyotuzunguka huitwa."
+  });
+  // Validator corrections that must also be available in fully offline mode.
+  Object.assign(INLINE["./content/i18n/sw-TZ/texts.json"], {
+    "pg003_n0005": "Shukurani", "pg003_n0006": "5",
+    "pg003_n0007": "Utangulizi", "pg003_n0008": "6",
+    "pg003_n0010": "Mazingira", "pg003_n0011": "1",
+    "pg003_n0013": "Nishati", "pg003_n0014": "15",
+    "pg003_n0016": "Matumizi ya nishati", "pg003_n0017": "35",
+    "pg003_n0019": "Maada", "pg003_n0020": "50",
+    "pg003_n0022": "Njia za mawasiliano", "pg003_n0023": "62",
+    "pg003_n0025": "Vifaa vya kurahisisha kazi", "pg003_n0026": "73",
+    "pg003_n0028": "Vipimo", "pg003_n0029": "77",
+    "pg003_n0031": "Majaribio ya kisayansi", "pg003_n0032": "84",
+    "pg003_n0034": "Usafi wa mwili na mavazi", "pg003_n0035": "94",
+    "pg003_n0037": "Huduma ya kwanza", "pg003_n0038": "100",
+    "pg003_n0040": "Mlo kamili", "pg003_n0041": "107",
+    "pg003_n0005_easy_read": "Shukurani", "pg003_n0006_easy_read": "5",
+    "pg003_n0007_easy_read": "Utangulizi", "pg003_n0008_easy_read": "6",
+    "pg003_n0010_easy_read": "Mazingira", "pg003_n0011_easy_read": "1",
+    "pg003_n0013_easy_read": "Nishati", "pg003_n0014_easy_read": "15",
+    "pg003_n0016_easy_read": "Matumizi ya nishati", "pg003_n0017_easy_read": "35",
+    "pg003_n0019_easy_read": "Maada", "pg003_n0020_easy_read": "50",
+    "pg003_n0022_easy_read": "Njia za mawasiliano", "pg003_n0023_easy_read": "62",
+    "pg003_n0025_easy_read": "Vifaa vya kurahisisha kazi", "pg003_n0026_easy_read": "73",
+    "pg003_n0028_easy_read": "Vipimo", "pg003_n0029_easy_read": "77",
+    "pg003_n0031_easy_read": "Majaribio ya kisayansi", "pg003_n0032_easy_read": "84",
+    "pg003_n0034_easy_read": "Usafi wa mwili na mavazi", "pg003_n0035_easy_read": "94",
+    "pg003_n0037_easy_read": "Huduma ya kwanza", "pg003_n0038_easy_read": "100",
+    "pg003_n0040_easy_read": "Mlo kamili", "pg003_n0041_easy_read": "107",
+    "pg009_n0039": "Chunguza Kielelezo namba 2.",
+    "pg010_n0003": "Chunguza Kielelezo namba 3.",
+    "pg013_n0002": "Chunguza Kielelezo namba 7, kisha jibu maswali.",
+    "pg015_n0019": "Chunguza Kielelezo namba 8, kisha jibu maswali.",
+    "pg018_n0012": "Chunguza Kielelezo namba 11, kisha soma mazungumzo kati ya Neema na Musa.",
+    "pg034_n0012": "Chunguza Kielelezo namba 13.",
+    "pg084_n0019": "Makopo mawili, mahindi, na unga",
+    "pg009_n0039_easy_read": "Chunguza Kielelezo namba 2.",
+    "pg010_n0003_easy_read": "Chunguza Kielelezo namba 3.",
+    "pg013_n0002_easy_read": "Chunguza Kielelezo namba 7.\nKisha jibu maswali.",
+    "pg015_n0019_easy_read": "Chunguza Kielelezo namba 8.\nKisha jibu maswali.",
+    "pg018_n0012_easy_read": "Chunguza Kielelezo namba 11.\nKisha soma mazungumzo kati ya Neema na Musa.",
+    "pg034_n0012_easy_read": "Chunguza Kielelezo namba 13.",
+    "pg084_n0019_easy_read": "Vitu vinavyohitajika:\n- makopo 2\n- mahindi\n- unga",
+    "pg106_im004_seg001_v1": "Tandu, nge, nyuki na nyigu, kila mdudu akiwa na jina lake chini."
+  });
+
   function lookup(url) {
     var clean = String(url).split("?")[0].split("#")[0];
     if (BASE_DIR && clean.indexOf(BASE_DIR) === 0) clean = clean.slice(BASE_DIR.length);
