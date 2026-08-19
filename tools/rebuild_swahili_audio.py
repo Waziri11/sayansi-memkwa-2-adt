@@ -47,6 +47,9 @@ def ordinal(value: int) -> str:
 
 def normalize_for_speech(text: str, key: str = "") -> str:
     spoken = text.replace("[[blank:", " ").replace("]]", " ")
+    # RehemaNeural pronounces the apostrophe in ng'ombe unnaturally; omitting it
+    # in the speech input preserves the correct Tanzanian Swahili pronunciation.
+    spoken = re.sub(r"\bng[’']ombe\b", "ngombe", spoken, flags=re.I)
     page = re.match(r"pg(\d{3})_", key)
     marker = re.fullmatch(r"\s*(\d+)\.\s*", spoken)
     if marker:
@@ -65,7 +68,9 @@ def normalize_for_speech(text: str, key: str = "") -> str:
     spoken = re.sub(r"\b(ml)\b", "mililita", spoken, flags=re.I)
     spoken = re.sub(r"\b(kg)\b", "kilogramu", spoken, flags=re.I)
     spoken = re.sub(r"\b(cm)\b", "sentimeta", spoken, flags=re.I)
+    spoken = re.sub(r"\b(sm)\b", "sentimeta", spoken, flags=re.I)
     spoken = re.sub(r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b", lambda m: f"tarehe {number_to_words(int(m.group(1)))} mwezi wa {number_to_words(int(m.group(2)))} mwaka {number_to_words(int(m.group(3)))}", spoken)
+    spoken = re.sub(r"\b(\d+)\.(\d+)\b", lambda m: f"{number_to_words(int(m.group(1)))} nukta {' '.join(ONES[int(digit)] for digit in m.group(2))}", spoken)
     spoken = re.sub(r"\b\d+\b", lambda m: number_to_words(int(m.group())), spoken)
     spoken = spoken.replace("+", " kujumlisha ").replace("−", " kutoa ").replace("-", " kutoa ")
     return re.sub(r"\s+", " ", spoken).strip()
@@ -110,6 +115,7 @@ def main() -> None:
     parser.add_argument("--sample", type=int, default=20)
     parser.add_argument("--limit", type=int, default=0, help="Generate only the first N affected IDs (QA only).")
     parser.add_argument("--pages", default="", help="Optional comma-separated three-digit page numbers.")
+    parser.add_argument("--ids", default="", help="Optional comma-separated text IDs to rebuild exactly.")
     parser.add_argument(
         "--skip-git-modified",
         action="store_true",
@@ -123,7 +129,12 @@ def main() -> None:
     args = parser.parse_args()
     texts = json.loads((I18N / "texts.json").read_text())
     audios = json.loads((I18N / "audios.json").read_text())
-    items = [(key, value) for key, value in texts.items() if key in audios and needs_rebuild(key, value)]
+    requested_ids = {key.strip() for key in args.ids.split(",") if key.strip()}
+    items = [
+        (key, value)
+        for key, value in texts.items()
+        if key in audios and (key in requested_ids if requested_ids else needs_rebuild(key, value))
+    ]
     if args.standalone_markers_only:
         items = [(key, value) for key, value in items if re.fullmatch(r"\s*\d+\.\s*", value)]
     if args.pages:

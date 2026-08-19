@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sayansi na Teknolojia</title>
     <meta name="title-id" content="pg092_sec001" />
-    <meta name="page-section-id" content="144" />
+    <meta name="page-section-id" content="143" />
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
@@ -16,6 +16,16 @@
 
     <style>
       body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select { font-family: 'Atkinson Hyperlegible','Merriweather',sans-serif; }
+      .growth-table { width: 100%; min-width: 814px; border-collapse: collapse; table-layout: fixed; font-size: 20px; line-height: 1.28; }
+      .growth-table th, .growth-table td { border: 1.5px solid #9a533e; padding: 10px 14px; vertical-align: middle; }
+      .growth-table thead th { background: #742523; color: #fff; text-align: center; font-weight: 700; font-size: 21px; }
+      .growth-table thead th:first-child { width: 22%; }
+      .growth-table thead th:last-child { width: 24%; }
+      .growth-table tbody th { text-align: left; font-weight: 700; }
+      .growth-table tbody td { text-align: left; }
+      .growth-table tbody td:last-child { font-weight: 700; }
+      @media (max-width: 1024px) { .growth-table { min-width: 760px; font-size: 18px; } .growth-table thead th { font-size: 19px; } }
+      @media (max-width: 640px) { .growth-table { min-width: 620px; font-size: 16px; } .growth-table thead th { font-size: 17px; } .growth-table th, .growth-table td { padding: 8px 10px; } }
     </style></head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -34,7 +44,40 @@
         <div class="rounded-md border border-[#9a533e] bg-white p-2 max-sm:p-1">
           <div class="overflow-x-auto overflow-y-hidden max-sm:-mx-1 max-sm:px-1">
             <div class="w-max min-w-full">
-              <img data-id="pg092_im006" src="images/pg092_im006.png" alt="Jedwali la ukuaji wa mchicha linaonyesha kuwa mchicha uliomwagiliwa ulikua kutoka sm 1 siku ya 1 hadi sm 8 siku ya 9 na umekua vizuri, huku mchicha usiomwagiliwa ukibaki karibu sm 1 hadi sm 1.5 na haujakua vizuri." class="block h-auto object-contain max-w-none w-full min-w-[980px] max-lg:min-w-[760px] max-sm:min-w-[620px]" style="max-width: 100%; height: auto;">
+              <table class="growth-table">
+                <caption class="sr-only">Umuhimu wa maji katika ukuaji wa mchicha</caption>
+                <thead>
+                  <tr>
+                    <th scope="col"><span class="sr-only">Aina ya mchicha</span></th>
+                    <th scope="col"><span data-id="pg092_n0101">Siku ya 1</span></th>
+                    <th scope="col"><span data-id="pg092_n0102">Siku ya 3</span></th>
+                    <th scope="col"><span data-id="pg092_n0103">Siku ya 5</span></th>
+                    <th scope="col"><span data-id="pg092_n0104">Siku ya 7</span></th>
+                    <th scope="col"><span data-id="pg092_n0105">Siku ya 9</span></th>
+                    <th scope="col"><span data-id="pg092_n0106">Matokeo ya ukuaji</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><span data-id="pg092_n0107">Urefu wa mchicha uliomwagiliwa</span></th>
+                    <td><span data-id="pg092_n0108">sm 1</span></td>
+                    <td><span data-id="pg092_n0109">sm 2.5</span></td>
+                    <td><span data-id="pg092_n0110">sm 4</span></td>
+                    <td><span data-id="pg092_n0111">sm 6</span></td>
+                    <td><span data-id="pg092_n0112">sm 8</span></td>
+                    <td><span data-id="pg092_n0113">Mchicha umekua vizuri</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><span data-id="pg092_n0114">Urefu wa mchicha usiomwagiliwa</span></th>
+                    <td><span data-id="pg092_n0115">sm 1</span></td>
+                    <td><span data-id="pg092_n0116">sm 1.5</span></td>
+                    <td><span data-id="pg092_n0117">sm 1.5</span></td>
+                    <td><span data-id="pg092_n0118">sm 1.5</span></td>
+                    <td><span data-id="pg092_n0119">sm 1.5</span></td>
+                    <td><span data-id="pg092_n0120">Mchicha haujakua vizuri</span></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
