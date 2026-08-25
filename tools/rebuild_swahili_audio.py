@@ -20,7 +20,53 @@ ORDINALS = {1: "kwanza", 2: "pili", 3: "tatu", 4: "nne", 5: "tano", 6: "sita", 7
 ROMAN = {"i": 1, "ii": 2, "iii": 3, "iv": 4, "v": 5, "vi": 6, "vii": 7, "viii": 8, "ix": 9, "x": 10}
 LETTERS = {"a": "a", "b": "be", "c": "che", "d": "de", "e": "e", "f": "fe", "g": "ge", "h": "he", "i": "i"}
 REPORTED_PAGES = {3, 13, 14, 22, 23, 24, 29, 32, 38, 39, 66, 82, 84, 89, 92, 103}
-QUESTION_PAGES = {8, 13, 14, 15, 16, 19, 21, 29, 30, 35, 38, 39, 42, 46, 48, 56, 58, 60, 63, 66, 76, 82, 83, 86, 89, 91, 103}
+QUESTION_PAGES = {8, 13, 14, 15, 16, 19, 20, 21, 29, 30, 35, 38, 39, 46, 48, 53, 54, 58, 60, 66, 67, 76, 82, 83, 86, 89, 91, 103}
+
+SPEECH_OVERRIDES = {
+    "pg003_n0040": "Sura ya kumi na nne",
+    "pg004_n0010": "Sura ya kumi na nne",
+    "pg023_n0028": "Swali la sita. Mwambie rafiki yako agonge chuma.",
+    "pg039_n0030": "Swali la kumi na saba. Tunakausha mazao kwa kutumia nishati ya mwanga.",
+    "pg044_n0002": "Swali la tano.",
+    "pg044_n0048": "Swali la sita.",
+    "pg044_n0051": "Swali la saba.",
+    "pg044_n0054": "Swali la nane.",
+    "pg044_n0057": "Swali la tisa.",
+    "pg044_n0060": "Swali la kumi.",
+    "pg042_n0030": "Moja.",
+    "pg042_n0038": "Mbili.",
+    "pg043_n0002": "Tatu. Safisha jokofu.",
+    "pg043_n0013": "Nne. Panga vyakula kwa usahihi na usalama.",
+    "pg043_n0021": "Tano. Funga mlango wa jokofu kwa usahihi.",
+    "pg043_n0029": "Swali la kwanza. Taja vyakula vinavyoweza kuwekwa katika sehemu ya jokofu isiyogandisha.",
+    "pg043_n0030": "Swali la pili. Orodhesha faida tatu za kutumia jokofu.",
+    "pg043_n0031": "Swali la tatu. Fafanua mambo matano ya kuzingatia wakati wa kutumia jokofu.",
+    "pg043_n0032": "Swali la nne. Onesha hatua utakazofuata wakati wa kusafisha jokofu.",
+    "pg062_n0014": "Moja. Chukua kikombe cha plastiki chenye maji, weka juu ya meza.",
+    "pg071_n0026": "Kazi namba moja. Kutumia simu ya mkononi.",
+    "pg076_n0009": "Hatua ya kwanza. Chomeka waya wa antena au dishi kwenye kisimbuzi.",
+    "pg073_n0024": "Hatua ya kwanza. Weka betri kwenye redio au chomeka redio kwenye soketi ya umeme ili redio ipate nishati.",
+    "pg073_n0026": "Hatua ya pili. Washa redio kwa kutumia kitufe cha kuwashia.",
+    "pg073_n0028": "Hatua ya tatu. Tafuta stesheni kwa kuweka masafa tofauti, kisha simamisha kwenye stesheni unayohitaji.",
+    "pg073_n0031": "Hatua ya nne. Punguza au ongeza sauti kulingana na mahitaji.",
+    "pg073_n0033": "Hatua ya tano. Anza kusikiliza redio.",
+    "pg094_n0026": "Hatua ya kwanza. Chukua pamba katika mafungu mawili na iloweshe kwa maji.",
+    "pg094_n0028": "Hatua ya pili. Chukua bilauri au chupa mbili.",
+    "pg094_n0032": "Hatua ya tatu. Weka mbegu ya harage ndani ya kila pamba.",
+    "pg094_n0035": "Hatua ya nne. Katika bilauri au chupa A weka barafu kila siku asubuhi, mchana na jioni.",
+    "pg094_n0037": "Hatua ya tano. Katika bilauri au chupa B weka maji yasiyo na barafu.",
+    "pg063_n0028": "Hatua ya kwanza.",
+    "pg063_n0031": "Hatua ya pili.",
+    "pg063_n0034": "Hatua ya tatu.",
+    "pg063_n0037": "Hatua ya nne.",
+    "pg091_n0005": "Hatua ya kwanza. Kubainisha tatizo.",
+    "pg101_n0003": "Swali la kwanza.",
+    "pg147_n0021": "Swali la kwanza.",
+    "pg147_n0024": "Swali la pili.",
+    "pg147_n0027": "Swali la tatu.",
+    "pg147_n0030": "Swali la nne.",
+    "pg147_n0033": "Swali la tano.",
+}
 
 
 def number_to_words(value: int) -> str:
@@ -46,10 +92,16 @@ def ordinal(value: int) -> str:
 
 
 def normalize_for_speech(text: str, key: str = "") -> str:
+    if key in SPEECH_OVERRIDES:
+        return SPEECH_OVERRIDES[key]
     spoken = text.replace("[[blank:", " ").replace("]]", " ")
     # RehemaNeural pronounces the apostrophe in ng'ombe unnaturally; omitting it
     # in the speech input preserves the correct Tanzanian Swahili pronunciation.
     spoken = re.sub(r"\bng[’']ombe\b", "ngombe", spoken, flags=re.I)
+    spoken = re.sub(r"\bnge\b", "ng'e", spoken, flags=re.I)
+    spoken = re.sub(r"\bVVU\b", "ve ve u", spoken)
+    spoken = re.sub(r"\bUKIMWI\b", "u kimwi", spoken)
+    spoken = re.sub(r"\bmbalimbali\b", "mbali mbali", spoken, flags=re.I)
     page = re.match(r"pg(\d{3})_", key)
     marker = re.fullmatch(r"\s*(\d+)\.\s*", spoken)
     if marker:
@@ -116,6 +168,7 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=0, help="Generate only the first N affected IDs (QA only).")
     parser.add_argument("--pages", default="", help="Optional comma-separated three-digit page numbers.")
     parser.add_argument("--ids", default="", help="Optional comma-separated text IDs to rebuild exactly.")
+    parser.add_argument("--comment-matrix", action="store_true", help="Rebuild every narration asset affected by the comment-matrix remediation.")
     parser.add_argument(
         "--skip-git-modified",
         action="store_true",
@@ -130,6 +183,13 @@ def main() -> None:
     texts = json.loads((I18N / "texts.json").read_text())
     audios = json.loads((I18N / "audios.json").read_text())
     requested_ids = {key.strip() for key in args.ids.split(",") if key.strip()}
+    if args.comment_matrix:
+        from apply_comment_matrix_fixes import AUDIO_DIR, FORCE_REBUILD, TARGET_PAGES, page_number
+        requested_ids.update(
+            key for key, filename in audios.items()
+            if page_number(key) in TARGET_PAGES
+            and (key in FORCE_REBUILD or not (AUDIO_DIR / filename).exists() or (AUDIO_DIR / filename).stat().st_size == 0)
+        )
     items = [
         (key, value)
         for key, value in texts.items()
