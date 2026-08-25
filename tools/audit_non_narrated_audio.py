@@ -21,7 +21,15 @@ FOOTER = re.compile(
 )
 # These two captions split "Kielelezo namba ...:" and its descriptive text
 # across adjacent data IDs in the same HTML element.
-CAPTION_CONTINUATIONS = {"pg008_n0017", "pg047_n0010"}
+CAPTION_CONTINUATIONS = {
+    "pg008_n0017",
+    "pg047_n0010",
+    # Labels printed directly beneath stove illustrations.
+    "pg048_n0005",
+    "pg048_n0007",
+    "pg050_n0010",
+    "pg050_n0012",
+}
 
 
 def main() -> None:
