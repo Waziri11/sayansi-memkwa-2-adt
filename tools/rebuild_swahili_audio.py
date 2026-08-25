@@ -23,6 +23,18 @@ REPORTED_PAGES = {3, 13, 14, 22, 23, 24, 29, 32, 38, 39, 66, 82, 84, 89, 92, 103
 QUESTION_PAGES = {8, 13, 14, 15, 16, 19, 20, 21, 29, 30, 35, 38, 39, 46, 48, 53, 54, 58, 60, 66, 67, 76, 82, 83, 86, 89, 91, 103}
 
 SPEECH_OVERRIDES = {
+    "pg072_n0040": "Swali la tano. Wazazi au walezi hutumia simu kwa ajili ya dash, dash, na dash.",
+    "pg072_n0040_easy_read": "Swali la tano. Wazazi au walezi hutumia simu kwa ajili ya dash, dash, na dash.",
+    "pg072_n0041": "Swali la sita. Simu ya mkononi hutumika kupeleka na kupokea dash.",
+    "pg072_n0041_easy_read": "Swali la sita. Simu ya mkononi hutumika kupeleka na kupokea dash.",
+    "pg153_n0024": "Utumbo wa binadamu umegawanyika katika sehemu kuu, dash.",
+    "pg153_n0024_easy_read": "Utumbo wa binadamu umegawanyika katika sehemu kuu, dash.",
+    "pg153_n0027": "Viumbe hai hatari ni kama vile, dash, na dash.",
+    "pg153_n0027_easy_read": "Viumbe hai hatari ni kama vile, dash, na dash.",
+    "pg153_n0030": "Vitu hatari ni kama vile, dash, na dash.",
+    "pg153_n0030_easy_read": "Vitu hatari ni kama vile, dash, na dash.",
+    "pg153_n0033": "Aina kuu za simu ni, dash, na dash.",
+    "pg153_n0033_easy_read": "Aina kuu za simu ni, dash, na dash.",
     "pg003_n0040": "Sura ya kumi na nne",
     "pg004_n0010": "Sura ya kumi na nne",
     "pg023_n0028": "Swali la sita. Mwambie rafiki yako agonge chuma.",
