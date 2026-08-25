@@ -29,6 +29,13 @@ CAPTION_CONTINUATIONS = {
     "pg048_n0007",
     "pg050_n0010",
     "pg050_n0012",
+    # Labels printed directly beneath the six tool illustrations.
+    "pg079_n0016",
+    "pg079_n0019",
+    "pg079_n0022",
+    "pg079_n0025",
+    "pg079_n0028",
+    "pg079_n0031",
 }
 
 

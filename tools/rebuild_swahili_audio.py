@@ -111,7 +111,7 @@ def normalize_for_speech(text: str, key: str = "") -> str:
         return f"Namba {number_to_words(value)}."
     if page and int(page.group(1)) in QUESTION_PAGES:
         spoken = re.sub(r"^\s*(\d{1,2})\.\s*", lambda m: f"Swali la {ordinal(int(m.group(1)))}. ", spoken)
-    spoken = re.sub(r"\b(Zoezi|Jaribio) la\s+(\d+)\b", lambda m: f"{m.group(1)} la {ordinal(int(m.group(2)))}", spoken, flags=re.I)
+    spoken = re.sub(r"\b(Zoezi|Jaribio)(?: la)?\s+(\d+)\b", lambda m: f"{m.group(1)} la {ordinal(int(m.group(2)))}", spoken, flags=re.I)
     spoken = re.sub(r"\b(Sura|Shughuli) ya\s+(\d+)\b", lambda m: f"{m.group(1)} ya {ordinal(int(m.group(2)))}", spoken, flags=re.I)
     spoken = re.sub(r"\b(Kazi|Kielelezo|Jedwali) namba\s+(\d+)\b", lambda m: f"{m.group(1)} namba {number_to_words(int(m.group(2)))}", spoken, flags=re.I)
     spoken = re.sub(r"\((i{1,3}|iv|v|vi{0,3}|ix|x)\)", lambda m: number_to_words(ROMAN[m.group(1).lower()]), spoken, flags=re.I)
