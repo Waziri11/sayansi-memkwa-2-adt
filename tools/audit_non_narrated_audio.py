@@ -36,6 +36,9 @@ CAPTION_CONTINUATIONS = {
     "pg079_n0025",
     "pg079_n0028",
     "pg079_n0031",
+    # Labels printed beneath the two plant-pot illustrations.
+    "pg094_n0007",
+    "pg094_n0009",
 }
 
 
