@@ -19,6 +19,14 @@ def main() -> None:
     end = source.index(END, start)
     inline = json.loads(source[start:end])
 
+    # Files introduced after the original export must be explicitly added to
+    # the inline snapshot so file:// and offline reading use the same data.
+    for required in (
+        "./content/i18n/sw-TZ/sign-language-timings.json",
+        "./content/i18n/sw-TZ/videos.json",
+    ):
+        inline.setdefault(required, {})
+
     refreshed = []
     for key in list(inline):
         path = ROOT / key.removeprefix("./")
