@@ -54,15 +54,9 @@
 
   const applyRate = (audio, video) => {
     if (!audio || !video) return
-    const narrationDuration = Number(currentTiming?.[variantFor(audio)]?.total)
-    const mediaRatio =
-      narrationDuration > 0 && Number.isFinite(video.duration)
-        ? video.duration / narrationDuration
-        : 1
-    video.playbackRate = Math.min(
-      16,
-      Math.max(0.0625, mediaRatio * (audio.playbackRate || 1)),
-    )
+    // Sign-language performance must always be shown at its recorded pace.
+    // Narration speed and differing media durations must not accelerate it.
+    video.playbackRate = 1
   }
 
   const startTogether = async (audio) => {
