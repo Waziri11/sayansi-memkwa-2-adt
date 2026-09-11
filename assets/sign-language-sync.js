@@ -32,10 +32,10 @@
 
   const muteSignVideo = (video) => {
     if (!video) return
-    video.defaultMuted = true
-    video.muted = true
-    video.volume = 0
-    video.playsInline = true
+    if (!video.defaultMuted) video.defaultMuted = true
+    if (!video.muted) video.muted = true
+    if (video.volume !== 0) video.volume = 0
+    if (!video.playsInline) video.playsInline = true
   }
 
   const variantFor = (audio) =>
@@ -131,7 +131,8 @@
       if (event.target === signVideo()) {
         muteSignVideo(event.target)
         event.stopImmediatePropagation()
-        if (!narrationPlaying) nativePause.call(event.target)
+        // Native video controls also work when read-aloud is paused or off.
+        // Only suppress the runtime's media-mode switch; do not cancel play.
       }
     },
     true,
