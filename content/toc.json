@@ -1,8 +1,15 @@
 [
   {
-    "section_id": "pg001_sec001",
+    "section_id": "cover_sec001",
     "href": "index.html",
-    "title": "Sayansi na Teknolojia",
+    "title": "Jalada la mbele",
+    "chapter_id": "cover_n0001",
+    "level": 1
+  },
+  {
+    "section_id": "pg001_sec001",
+    "href": "pg001_sec001.html",
+    "title": "Ukurasa wa kichwa na ithibati",
     "chapter_id": "pg001_n0002",
     "level": 1
   },
@@ -1146,5 +1153,12 @@
     "title": "Sehemu B:",
     "chapter_id": "pg153_n0020",
     "level": 2
+  },
+  {
+    "section_id": "back_cover_sec001",
+    "href": "back_cover.html",
+    "title": "Jalada la nyuma",
+    "chapter_id": "back_cover_n0001",
+    "level": 1
   }
 ]

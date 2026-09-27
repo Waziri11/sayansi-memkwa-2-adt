@@ -5373,5 +5373,55 @@
       "taka zisizooza"
     ],
     "emoji": "🥤🗑️"
+  },
+  "kitabu": {
+    "word": "kitabu",
+    "definition": "Maandishi yaliyokusanywa na kuunganishwa pamoja kwa ajili ya kusoma au kujifunza.",
+    "variations": [
+      "kitabu",
+      "vitabu"
+    ],
+    "emoji": "📖"
+  },
+  "mwanafunzi": {
+    "word": "mwanafunzi",
+    "definition": "Mtu anayejifunza shuleni au katika sehemu nyingine ya elimu.",
+    "variations": [
+      "mwanafunzi",
+      "wanafunzi"
+    ],
+    "emoji": "🧑‍🎓"
+  },
+  "kundirika": {
+    "word": "kundirika",
+    "definition": "Kundi la wanafunzi wanaosoma pamoja katika mpango maalumu wa elimu.",
+    "variations": [
+      "kundirika"
+    ],
+    "emoji": "👥"
+  },
+  "taasisi": {
+    "word": "taasisi",
+    "definition": "Shirika lililoanzishwa kufanya kazi maalumu, kama kuandaa vifaa vya elimu.",
+    "variations": [
+      "taasisi"
+    ],
+    "emoji": "🏫"
+  },
+  "serikali": {
+    "word": "serikali",
+    "definition": "Chombo kinachoongoza nchi na kusimamia huduma na shughuli za umma.",
+    "variations": [
+      "serikali"
+    ],
+    "emoji": "🏛️"
+  },
+  "hisabati": {
+    "word": "hisabati",
+    "definition": "Somo la namba, vipimo, maumbo na jinsi ya kufanya hesabu.",
+    "variations": [
+      "hisabati"
+    ],
+    "emoji": "🔢"
   }
 }

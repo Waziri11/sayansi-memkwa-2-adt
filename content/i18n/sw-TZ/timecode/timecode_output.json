@@ -1,1 +1,619 @@
-{}
+{
+  "cover_n0002": {
+    "timecodes": [
+      {},
+      {
+        "word_timestamps": [
+          {
+            "text": "Kitabu",
+            "start": 0.168416,
+            "end": 0.523666
+          },
+          {
+            "text": "cha",
+            "start": 0.628958,
+            "end": 0.773708
+          },
+          {
+            "text": "Mwanafunzi",
+            "start": 0.8,
+            "end": 1.602625
+          }
+        ]
+      }
+    ]
+  },
+  "cover_n0003": {
+    "timecodes": [
+      {},
+      {
+        "word_timestamps": [
+          {
+            "text": "Kundirika",
+            "start": 0.168416,
+            "end": 0.589457
+          },
+          {
+            "text": "la",
+            "start": 0.681583,
+            "end": 0.799999
+          },
+          {
+            "text": "Kwanza",
+            "start": 0.839458,
+            "end": 1.194708
+          },
+          {
+            "text": "Mwaka",
+            "start": 1.221041,
+            "end": 1.536832
+          },
+          {
+            "text": "wa",
+            "start": 1.563166,
+            "end": 1.668416
+          },
+          {
+            "text": "Pili",
+            "start": 1.69475,
+            "end": 2.0895
+          }
+        ]
+      }
+    ]
+  },
+  "cover_n0001": {
+    "timecodes": [
+      {},
+      {
+        "word_timestamps": [
+          {
+            "text": "Sayansi",
+            "start": 0.168416,
+            "end": 0.642082
+          },
+          {
+            "text": "na",
+            "start": 0.734208,
+            "end": 0.852624
+          },
+          {
+            "text": "Teknolojia",
+            "start": 0.892125,
+            "end": 1.826333
+          }
+        ]
+      }
+    ]
+  },
+  "cover_n0004": {
+    "timecodes": [
+      {},
+      {
+        "word_timestamps": [
+          {
+            "text": "Taasisi",
+            "start": 0.181583,
+            "end": 0.628958
+          },
+          {
+            "text": "ya",
+            "start": 0.734208,
+            "end": 0.826333
+          },
+          {
+            "text": "Elimu",
+            "start": 0.852625,
+            "end": 1.221041
+          },
+          {
+            "text": "Tanzania",
+            "start": 1.260541,
+            "end": 2.023707
+          }
+        ]
+      }
+    ]
+  },
+  "cover_n0005": {
+    "timecodes": [
+      {},
+      {
+        "word_timestamps": [
+          {
+            "text": "Mali",
+            "start": 0.19475,
+            "end": 0.3395
+          },
+          {
+            "text": "ya",
+            "start": 0.457875,
+            "end": 0.523666
+          },
+          {
+            "text": "Serikali",
+            "start": 0.55,
+            "end": 1.142125
+          },
+          {
+            "text": "ya",
+            "start": 1.168416,
+            "end": 1.234207
+          },
+          {
+            "text": "Jamhuri",
+            "start": 1.260541,
+            "end": 1.747374
+          },
+          {
+            "text": "ya",
+            "start": 1.773666,
+            "end": 1.839457
+          },
+          {
+            "text": "Muungano",
+            "start": 1.865791,
+            "end": 2.339457
+          },
+          {
+            "text": "wa",
+            "start": 2.365791,
+            "end": 2.444749
+          },
+          {
+            "text": "Tanzania",
+            "start": 2.471041,
+            "end": 3.142082
+          },
+          {
+            "text": "Hakiuzwi",
+            "start": 3.234208,
+            "end": 3.957874
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0001": {
+    "timecodes": [
+      {},
+      {
+        "word_timestamps": [
+          {
+            "text": "Taasisi",
+            "start": 0.181583,
+            "end": 0.628958
+          },
+          {
+            "text": "ya",
+            "start": 0.734208,
+            "end": 0.826333
+          },
+          {
+            "text": "Elimu",
+            "start": 0.852625,
+            "end": 1.221041
+          },
+          {
+            "text": "Tanzania",
+            "start": 1.260541,
+            "end": 2.023707
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0002": {
+    "timecodes": [
+      {},
+      {
+        "word_timestamps": [
+          {
+            "text": "Vitabu",
+            "start": 0.168416,
+            "end": 0.536832
+          },
+          {
+            "text": "vingine",
+            "start": 0.628958,
+            "end": 1.063166
+          },
+          {
+            "text": "vya",
+            "start": 1.089458,
+            "end": 1.234208
+          },
+          {
+            "text": "Kundirika",
+            "start": 1.260541,
+            "end": 1.826332
+          },
+          {
+            "text": "la",
+            "start": 1.852625,
+            "end": 1.971041
+          },
+          {
+            "text": "Kwanza",
+            "start": 2.010541,
+            "end": 2.365791
+          },
+          {
+            "text": "Mwaka",
+            "start": 2.392125,
+            "end": 2.707916
+          },
+          {
+            "text": "wa",
+            "start": 2.734208,
+            "end": 2.826333
+          },
+          {
+            "text": "Pili",
+            "start": 2.852625,
+            "end": 3.247375
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0003": {
+    "timecodes": [
+      {},
+      {
+        "word_timestamps": [
+          {
+            "text": "Hisabati",
+            "start": 0.168416,
+            "end": 0.865791
+          },
+          {
+            "text": "Kitabu",
+            "start": 1.921041,
+            "end": 2.276291
+          },
+          {
+            "text": "cha",
+            "start": 2.381583,
+            "end": 2.526333
+          },
+          {
+            "text": "Mwanafunzi",
+            "start": 2.552625,
+            "end": 3.35525
+          },
+          {
+            "text": "Kundirika",
+            "start": 4.342125,
+            "end": 4.763166
+          },
+          {
+            "text": "la",
+            "start": 4.85525,
+            "end": 4.973666
+          },
+          {
+            "text": "Kwanza",
+            "start": 5.013166,
+            "end": 5.368416
+          },
+          {
+            "text": "Mwaka",
+            "start": 5.39475,
+            "end": 5.710541
+          },
+          {
+            "text": "wa",
+            "start": 5.736833,
+            "end": 5.842083
+          },
+          {
+            "text": "Pili",
+            "start": 5.868416,
+            "end": 6.263166
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0004": {
+    "timecodes": [
+      {},
+      {
+        "word_timestamps": [
+          {
+            "text": "English",
+            "start": 0.207875,
+            "end": 0.681541
+          },
+          {
+            "text": "Cohort",
+            "start": 1.763166,
+            "end": 2.092124
+          },
+          {
+            "text": "One",
+            "start": 2.197375,
+            "end": 2.434208
+          },
+          {
+            "text": "Year",
+            "start": 2.460541,
+            "end": 2.710541
+          },
+          {
+            "text": "Two",
+            "start": 2.763166,
+            "end": 3.105291
+          },
+          {
+            "text": "Learner’s",
+            "start": 4.118416,
+            "end": 4.644749
+          },
+          {
+            "text": "Book",
+            "start": 4.75,
+            "end": 5.131583
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0005": {
+    "timecodes": [
+      {},
+      {
+        "word_timestamps": [
+          {
+            "text": "Maarifa",
+            "start": 0.19475,
+            "end": 0.563166
+          },
+          {
+            "text": "ya",
+            "start": 0.681583,
+            "end": 0.773708
+          },
+          {
+            "text": "Jamii",
+            "start": 0.8,
+            "end": 1.339458
+          },
+          {
+            "text": "Kiongozi",
+            "start": 2.342125,
+            "end": 2.7895
+          },
+          {
+            "text": "cha",
+            "start": 2.907875,
+            "end": 3.06575
+          },
+          {
+            "text": "Mwalimu",
+            "start": 3.092125,
+            "end": 3.697375
+          },
+          {
+            "text": "Kundirika",
+            "start": 4.684208,
+            "end": 5.105249
+          },
+          {
+            "text": "la",
+            "start": 5.197375,
+            "end": 5.315791
+          },
+          {
+            "text": "Kwanza",
+            "start": 5.35525,
+            "end": 5.7105
+          },
+          {
+            "text": "Mwaka",
+            "start": 5.736833,
+            "end": 6.052624
+          },
+          {
+            "text": "wa",
+            "start": 6.078958,
+            "end": 6.184208
+          },
+          {
+            "text": "Pili",
+            "start": 6.210541,
+            "end": 6.605291
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0006": {
+    "timecodes": [
+      {},
+      {
+        "word_timestamps": [
+          {
+            "text": "Kiswahili",
+            "start": 0.168416,
+            "end": 0.839457
+          },
+          {
+            "text": "Kitabu",
+            "start": 1.868416,
+            "end": 2.223666
+          },
+          {
+            "text": "cha",
+            "start": 2.328958,
+            "end": 2.473708
+          },
+          {
+            "text": "Mwanafunzi",
+            "start": 2.5,
+            "end": 3.302625
+          },
+          {
+            "text": "Kundirika",
+            "start": 4.289458,
+            "end": 4.710499
+          },
+          {
+            "text": "la",
+            "start": 4.802625,
+            "end": 4.921041
+          },
+          {
+            "text": "Kwanza",
+            "start": 4.960541,
+            "end": 5.315791
+          },
+          {
+            "text": "Mwaka",
+            "start": 5.342125,
+            "end": 5.657916
+          },
+          {
+            "text": "wa",
+            "start": 5.684208,
+            "end": 5.789458
+          },
+          {
+            "text": "Pili",
+            "start": 5.815791,
+            "end": 6.210541
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0007": {
+    "timecodes": [
+      {},
+      {
+        "word_timestamps": [
+          {
+            "text": "Uraia",
+            "start": 0.181583,
+            "end": 0.602624
+          },
+          {
+            "text": "na",
+            "start": 0.707875,
+            "end": 0.8
+          },
+          {
+            "text": "Maadili",
+            "start": 0.826333,
+            "end": 1.457916
+          },
+          {
+            "text": "Kitabu",
+            "start": 2.473666,
+            "end": 2.828916
+          },
+          {
+            "text": "cha",
+            "start": 2.934208,
+            "end": 3.078958
+          },
+          {
+            "text": "Mwanafunzi",
+            "start": 3.10525,
+            "end": 3.907875
+          },
+          {
+            "text": "Kundirika",
+            "start": 4.89475,
+            "end": 5.315791
+          },
+          {
+            "text": "la",
+            "start": 5.407875,
+            "end": 5.526291
+          },
+          {
+            "text": "Kwanza",
+            "start": 5.565791,
+            "end": 5.921041
+          },
+          {
+            "text": "Mwaka",
+            "start": 5.947375,
+            "end": 6.263166
+          },
+          {
+            "text": "wa",
+            "start": 6.289458,
+            "end": 6.394708
+          },
+          {
+            "text": "Pili",
+            "start": 6.421041,
+            "end": 6.815791
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0009": {
+    "timecodes": [
+      {},
+      {
+        "word_timestamps": [
+          {
+            "text": "Mali",
+            "start": 0.19475,
+            "end": 0.3395
+          },
+          {
+            "text": "ya",
+            "start": 0.457875,
+            "end": 0.523666
+          },
+          {
+            "text": "Serikali",
+            "start": 0.55,
+            "end": 1.142125
+          },
+          {
+            "text": "ya",
+            "start": 1.168416,
+            "end": 1.234207
+          },
+          {
+            "text": "Jamhuri",
+            "start": 1.260541,
+            "end": 1.747374
+          },
+          {
+            "text": "ya",
+            "start": 1.773666,
+            "end": 1.839457
+          },
+          {
+            "text": "Muungano",
+            "start": 1.865791,
+            "end": 2.339457
+          },
+          {
+            "text": "wa",
+            "start": 2.365791,
+            "end": 2.444749
+          },
+          {
+            "text": "Tanzania",
+            "start": 2.471041,
+            "end": 3.142082
+          },
+          {
+            "text": "Hakiuzwi",
+            "start": 3.234208,
+            "end": 3.957874
+          }
+        ]
+      }
+    ]
+  }
+}

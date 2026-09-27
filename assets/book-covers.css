@@ -1,0 +1,4 @@
+#content.cover-reader-content { padding:0 !important; max-width:72rem; min-height:100vh; }
+.cover-reader-content section { margin:0; padding:0; }
+.cover-only-image { display:block; width:100%; height:auto; margin:0 auto; }
+body { padding-bottom:calc(6rem + env(safe-area-inset-bottom)); }
